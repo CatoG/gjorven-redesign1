@@ -1,10 +1,18 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
-import './styles/template.css'
-import './styles/index2205.css'
-import './styles/eventgallery.css'
-import './styles/eventgallery-responsive.css'
+
+import '@fontsource/eb-garamond/latin-400.css'
+import '@fontsource/eb-garamond/latin-ext-400.css'
+import '@fontsource/work-sans/latin-300.css'
+import '@fontsource/work-sans/latin-ext-300.css'
+import '@fontsource/work-sans/latin-500.css'
+import '@fontsource/work-sans/latin-ext-500.css'
+import '@fontsource/ibm-plex-mono/latin-400.css'
+import '@fontsource/ibm-plex-mono/latin-ext-400.css'
+import '@fontsource/ibm-plex-mono/latin-500.css'
+import '@fontsource/ibm-plex-mono/latin-ext-500.css'
+
 import './styles/theme.css'
 import App from './App.jsx'
 

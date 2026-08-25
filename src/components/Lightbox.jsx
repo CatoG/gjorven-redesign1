@@ -1,7 +1,20 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
-export default function Lightbox({ items, index, onClose, onNavigate }) {
+export default function Lightbox({ items, index, kind, onClose, onNavigate }) {
+  const closeButtonRef = useRef(null);
   const item = items[index];
+
+  useEffect(() => {
+    const previouslyFocused = document.activeElement;
+    closeButtonRef.current?.focus();
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      if (previouslyFocused instanceof HTMLElement) previouslyFocused.focus();
+    };
+  }, []);
 
   useEffect(() => {
     function onKeyDown(e) {
@@ -15,93 +28,57 @@ export default function Lightbox({ items, index, onClose, onNavigate }) {
 
   if (!item) return null;
 
-  return (
-    <div
-      onClick={onClose}
-      style={{
-        position: 'fixed',
-        inset: 0,
-        background: 'rgba(0,0,0,0.85)',
-        zIndex: 9999,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
-    >
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          onClose();
-        }}
-        aria-label="Close"
-        style={{
-          position: 'absolute',
-          top: 20,
-          right: 30,
-          fontSize: 32,
-          color: 'white',
-          background: 'none',
-          border: 'none',
-          cursor: 'pointer',
-          lineHeight: 1,
-        }}
-      >
-        &times;
-      </button>
+  const image = (
+    <img
+      src={`/gallery/${item.file}`}
+      alt={item.title || ''}
+      className={kind === 'illustration' ? undefined : 'lightbox-image'}
+    />
+  );
 
+  return (
+    <div className="lightbox-overlay" onClick={onClose} role="dialog" aria-modal="true" aria-label={item.title}>
       <button
+        type="button"
+        className="lightbox-arrow lightbox-arrow--prev"
         onClick={(e) => {
           e.stopPropagation();
           onNavigate((index - 1 + items.length) % items.length);
         }}
-        aria-label="Previous"
-        style={navButtonStyle('left')}
+        aria-label="Forrige bilde"
       >
-        &#8249;
+        ←
       </button>
 
-      <figure
-        onClick={(e) => e.stopPropagation()}
-        style={{ margin: 0, maxWidth: '90vw', maxHeight: '85vh', textAlign: 'center' }}
-      >
-        <img
-          src={`/gallery/${item.file}`}
-          alt={item.title}
-          style={{ maxWidth: '90vw', maxHeight: '80vh', display: 'block', margin: '0 auto' }}
-        />
-        {item.title && (
-          <figcaption style={{ color: 'white', marginTop: 12, fontFamily: 'verdana', fontSize: 13 }}>
-            {item.title}
-          </figcaption>
-        )}
+      <figure className="lightbox-figure">
+        {kind === 'illustration' ? <div className="lightbox-image lightbox-image--mat">{image}</div> : image}
+        <figcaption className="lightbox-meta">
+          {item.title && <span className="lightbox-title">{item.title}</span>}
+          <button
+            type="button"
+            ref={closeButtonRef}
+            className="lightbox-close"
+            onClick={(e) => {
+              e.stopPropagation();
+              onClose();
+            }}
+          >
+            LUKK ×
+          </button>
+        </figcaption>
       </figure>
 
       <button
+        type="button"
+        className="lightbox-arrow lightbox-arrow--next"
         onClick={(e) => {
           e.stopPropagation();
           onNavigate((index + 1) % items.length);
         }}
-        aria-label="Next"
-        style={navButtonStyle('right')}
+        aria-label="Neste bilde"
       >
-        &#8250;
+        →
       </button>
     </div>
   );
-}
-
-function navButtonStyle(side) {
-  return {
-    position: 'absolute',
-    [side]: 20,
-    top: '50%',
-    transform: 'translateY(-50%)',
-    fontSize: 48,
-    color: 'white',
-    background: 'none',
-    border: 'none',
-    cursor: 'pointer',
-    lineHeight: 1,
-    padding: '0 10px',
-  };
 }

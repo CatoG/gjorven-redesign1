@@ -1,59 +1,53 @@
 import { Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
+import Home from './pages/Home';
 import GalleryPage from './pages/GalleryPage';
-import MoreAboutPage from './pages/MoreAboutPage';
-import ArticlePage from './pages/ArticlePage';
+import About from './pages/About';
+import Oppdrag from './pages/Oppdrag';
+import Referanser from './pages/Referanser';
+import Kontakt from './pages/Kontakt';
+import MoreAbout from './pages/MoreAbout';
 
-import fjordscapes from './data/pages/fjordscapes';
-import evigIs from './data/pages/evigIs';
-import bestefarsBok from './data/pages/bestefarsBok';
-import floralis from './data/pages/floralis';
-import bokdesign from './data/pages/bokdesign';
-import grafikkOgIllustrasjon from './data/pages/grafikkOgIllustrasjon';
-import logoOgIdentitet from './data/pages/logoOgIdentitet';
+import { galleries } from './data/galleries';
 
-import omReidarGjorven from './data/pages/omReidarGjorven';
-import oppdrag from './data/pages/oppdrag';
-import referanser from './data/pages/referanser';
-import kontaktinformasjon from './data/pages/kontaktinformasjon';
+import fjordscapesRaw from './data/pages/fjordscapes';
+import evigIsRaw from './data/pages/evigIs';
+import bestefarsBokRaw from './data/pages/bestefarsBok';
+import floralisRaw from './data/pages/floralis';
+import bokdesignRaw from './data/pages/bokdesign';
+import grafikkRaw from './data/pages/grafikkOgIllustrasjon';
 
-const galleries = [
-  { path: '/', data: fjordscapes },
-  { path: '/evig-is', data: evigIs },
-  { path: '/bestefars-bok', data: bestefarsBok },
-  { path: '/floralis', data: floralis },
-  { path: '/bokdesign', data: bokdesign },
-  { path: '/grafikk-og-illustrasjon', data: grafikkOgIllustrasjon },
-  { path: '/logo-og-identitet', data: logoOgIdentitet },
-];
-
-const articles = [
-  { path: '/om-reidar-gjorven', data: omReidarGjorven },
-  { path: '/oppdrag', data: oppdrag },
-  { path: '/referanser', data: referanser },
-  { path: '/kontaktinformasjon', data: kontaktinformasjon },
-];
+const moreContent = {
+  fjordscapes: fjordscapesRaw.more,
+  'evig-is': evigIsRaw.more,
+  'bestefars-bok': bestefarsBokRaw.more,
+  floralis: floralisRaw.more,
+  bokdesign: bokdesignRaw.more,
+  'grafikk-og-illustrasjon': grafikkRaw.more,
+};
 
 export default function App() {
   return (
-    <Layout>
+    <div className="site">
       <Routes>
-        {galleries.map((g) => (
-          <Route key={g.path} path={g.path} element={<GalleryPage data={g.data} />} />
+        <Route path="/" element={<Home />} />
+
+        {Object.values(galleries).map((g) => (
+          <Route key={g.slug} path={`/${g.slug}`} element={<GalleryPage data={g} />} />
         ))}
-        {galleries
-          .filter((g) => g.data.more)
-          .map((g) => (
-            <Route
-              key={`${g.path}-more`}
-              path={`/${g.data.slug}/mer-om-${g.data.slug}`}
-              element={<MoreAboutPage data={g.data} />}
-            />
-          ))}
-        {articles.map((a) => (
-          <Route key={a.path} path={a.path} element={<ArticlePage data={a.data} />} />
+
+        {Object.entries(moreContent).map(([slug, more]) => (
+          <Route
+            key={`${slug}-more`}
+            path={`/${slug}/mer-om-${slug}`}
+            element={<MoreAbout heading={more.heading} bodyHtml={more.body} footerVariant={galleries[slug]?.footer ?? 'series'} />}
+          />
         ))}
+
+        <Route path="/om-reidar-gjorven" element={<About />} />
+        <Route path="/oppdrag" element={<Oppdrag />} />
+        <Route path="/referanser" element={<Referanser />} />
+        <Route path="/kontaktinformasjon" element={<Kontakt />} />
       </Routes>
-    </Layout>
+    </div>
   );
 }
