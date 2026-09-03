@@ -29,7 +29,8 @@ export default function App() {
   return (
     <div className="site">
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<GalleryPage data={galleries.fjordscapes} />} />
+        <Route path="/intro" element={<Home />} />
 
         {Object.values(galleries).map((g) => (
           <Route key={g.slug} path={`/${g.slug}`} element={<GalleryPage data={g} />} />
