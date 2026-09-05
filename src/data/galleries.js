@@ -134,7 +134,7 @@ export const galleries = {
   'logo-og-identitet': {
     slug: 'logo-og-identitet',
     title: 'Logo og identitet',
-    kind: 'photo',
+    kind: 'illustration',
     showFilters: true,
     heading: 'Logo og identitet',
     intro: 'Typografiske arbeider, logodesign og visuell identitet.',
