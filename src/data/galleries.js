@@ -63,23 +63,24 @@ export const galleries = {
     title: 'Fjordscapes',
     kind: 'photo',
     showFilters: true,
-    heading: 'Fjordscapes',
+    heading: 'Fjordscapes - landskap fra norske fjorder',
     intro:
-      'Landskap fra norske fjorder. Noen av motivene kan leveres som doble postkort, pakker a 7 assorterte kort med konvolutter. Ta kontakt for nærmere opplysninger og priser.',
+      'Fjordlandskapet er en av våre viktigste naturressurser enten vi ser det fra bilveien, fra dekket på Hurtigruta, eller vi se det i fugleperspektiv fra en snøkledt topp. Sommer som vinter. Med bakgrunn fra Stryn i Nordfjord har jeg bygget opp et betydelig billedarkiv med landskapsmotiver fra fjell og fjord. En del av motivene er videre bearbeidet som akryl- eller akvarellmalerier og digital grafikk. Noen kan også leveres som doble postkort.',
     counterLabel: (n) => `${n} MOTIV`,
     footer: 'series',
     thumbs: fjordscapesThumbs,
   },
   'evig-is': {
     slug: 'evig-is',
-    title: 'Evig is',
+    title: 'Evig is?',
     kind: 'photo',
     showFilters: true,
-    heading: 'Evig is',
+    heading: 'Evig is? Eternal ice?',
     intro:
-      'Isbreene er blant våre mest besøkte turistattraksjoner, og en viktig del av vår norske identitet. Designeren Reidar Gjørven henter inspirasjon i brelandskapet, og tolker is, vann og stein i ord og bilder.',
+      'Isbreene er blant våre mest besøkte turistattraksjoner, og en viktig del av vår norske identitet. Vil de være borte om 50 år på grunn av klimaendringer? Designeren Reidar Gjørven henter inspirasjon i brelandskapet, og tolker is, vann og stein i ord og bilder. Bildene danner også grunnlaget for skulpturelle objekter i glass.',
     counterLabel: (n) => `${n} MOTIV`,
     footer: 'series',
+    cover: 'images/boksbilder/evig_is_cover2.jpg',
     thumbs: evigIsRaw.thumbs,
   },
   'bestefars-bok': {
@@ -89,7 +90,7 @@ export const galleries = {
     showFilters: true,
     heading: 'Bestefars bok',
     intro:
-      'Sanger, regler, eventyr og leker. I 2008 lanserte Epoke Forlag «Bestefars bok». Design og illustrasjoner ved Reidar Gjørven. Boken inneholder sanger, barnerim, regler og eventyr. Den er nyillustrert med over 200 tegninger og akvareller.',
+      'I 2008 lanserte Epoke Forlag "Bestefars bok". Design og illustrasjoner ved Reidar Gjørven. Boken inneholder sanger, barnerim, regler og eventyr. Den er illustrert med over 200 tegninger og akvareller. Bestemors bok kom på samme forlag i 2007.',
     counterLabel: (n) => `${n} ILLUSTRASJONER I UTVALG`,
     footer: 'epoke',
     cover: 'images/boksbilder/COVER_LR_Bedstefars-bok.jpg',
