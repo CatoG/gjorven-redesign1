@@ -30,13 +30,14 @@ export default function Kontakt() {
                 </div>
               ))}
             </div>
-
-            <p className="kontakt-closing">{kontakt.closing}</p>
+          </div>
+          <div className="kontakt-closing">
+            <p>{kontakt.closing}</p>
           </div>
           <img className="kontakt-image" src={kontakt.image} alt="Odden, Nordfjord" />
         </div>
       </main>
-      <Footer variant="series" />
+      <Footer />
     </>
   );
 }

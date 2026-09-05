@@ -42,7 +42,7 @@ export default function Home() {
         </div>
       </main>
 
-      <Footer variant="contact" />
+      <Footer />
     </>
   );
 }

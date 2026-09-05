@@ -94,7 +94,7 @@ export const galleries = {
     intro:
       'I 2008 lanserte Epoke Forlag "Bestefars bok". Design og illustrasjoner ved Reidar Gjørven. Boken inneholder sanger, barnerim, regler og eventyr. Den er illustrert med over 200 tegninger og akvareller. Bestemors bok kom på samme forlag i 2007.',
     counterLabel: (n) => `${n} ILLUSTRASJONER I UTVALG`,
-    footer: 'epoke',
+    footer: 'series',
     cover: 'images/boksbilder/COVER_LR_Bedstefars-bok.jpg',
     thumbs: bestefarsBokThumbs,
   },
@@ -130,7 +130,7 @@ export const galleries = {
     showFilters: true,
     heading: 'Grafikk og illustrasjon',
     intro:
-      'Design og trykk av reklamemateriell. Digital grafikk, malerier i akvarell og akryl utføres på bestilling.',
+      'Digital grafikk, malerier i akvarell og akryl utføres på bestilling. Medlem Grafill.',
     counterLabel: (n) => `${n} MOTIV`,
     footer: 'series',
     thumbs: grafikkRaw.thumbs,
@@ -141,7 +141,7 @@ export const galleries = {
     kind: 'illustration',
     showFilters: true,
     heading: 'Logo og identitet',
-    intro: 'Typografiske arbeider, logodesign og visuell identitet.',
+    intro: 'Typografiske arbeider, logodesign og visuell identitet. Design og trykk av reklamemateriell. Kalligrafi av diplomer og lignende. Medlem Grafill.',
     counterLabel: (n) => `${n} MOTIV`,
     footer: 'series',
     thumbs: logoRaw.thumbs,

@@ -8,7 +8,7 @@ export default function Header({ overlay = false }) {
     <header className={`site-header${overlay ? ' site-header--overlay' : ''}`}>
       <Link to="/" className="wordmark">
         <span className="wordmark-title">Reidar Gjørven</span>
-        <span className="wordmark-subtitle">Grafisk designer og illustratør</span>
+        <span className="wordmark-subtitle">Grafisk designer</span>
       </Link>
       <nav className="main-nav" aria-label="Hovedmeny">
         {mainNav.map((item) => (

@@ -16,18 +16,18 @@ export default function About() {
                 {p}
               </p>
             ))}
-            <div className="about-clients">
-              <span className="eyebrow">{about.clientsEyebrow}</span>
-              <p className="about-clients-body">{about.clientsBody}</p>
-              <Link to="/referanser" className="underline-link">
-                Alle referanser
-              </Link>
-            </div>
           </div>
           <img className="about-portrait" src={about.portrait} alt="Portrett av Reidar Gjørven" />
+          <div className="about-clients">
+            <span className="eyebrow">{about.clientsEyebrow}</span>
+            <p className="about-clients-body">{about.clientsBody}</p>
+            <Link to="/referanser" className="underline-link">
+              Alle referanser
+            </Link>
+          </div>
         </div>
       </main>
-      <Footer variant="series" />
+      <Footer />
     </>
   );
 }

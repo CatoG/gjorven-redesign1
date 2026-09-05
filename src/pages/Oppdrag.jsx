@@ -31,7 +31,7 @@ export default function Oppdrag() {
           ))}
         </div>
       </main>
-      <Footer variant="contact" />
+      <Footer />
     </>
   );
 }

@@ -55,20 +55,20 @@ export const oppdrag = {
   ],
   cards: [
     {
-      title: 'Bokomslag og bokdesign',
-      to: '/bokdesign',
-      image: '/images/boksbilder/COVER_LR_Bedstefars-bok.jpg',
+      title: 'Logo og identitet',
+      to: '/logo-og-identitet',
+      image: '/gallery/image57c8.jpg',
       objectPosition: 'top',
     },
     {
-      title: 'Grafisk design og illustrasjon',
-      to: '/grafikk-og-illustrasjon',
-      image: '/gallery/image1302.jpg', // Fabelfisk
+      title: 'Bokdesign',
+      to: '/bokdesign',
+      image: '/gallery/image432b.jpg', 
     },
     {
-      title: 'Logo og identitet',
-      to: '/logo-og-identitet',
-      image: '/gallery/image76ec.jpg', // Konge — stand-in, see handoff "Assets"
+      title: 'Grafikk og illustrasjon',
+      to: '/grafikk-og-illustrasjon',
+      image: '/gallery/imaged846.jpg', 
     },
   ],
 };
@@ -89,6 +89,6 @@ export const kontakt = {
     { eyebrow: 'E-POST', value: 'reidar(a)gjorven.no' },
     { eyebrow: 'TELEFON', lines: ['+47 966 07 695'] },
   ],
-  closing: 'Ta kontakt for nærmere opplysninger og priser.',
-  image: '/gallery/imagea075.jpg', // Odden
+  closing: '...',
+  image: '/images/reidar.jpg',
 };
