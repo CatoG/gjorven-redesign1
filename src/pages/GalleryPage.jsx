@@ -33,7 +33,7 @@ export default function GalleryPage({ data }) {
 
         <GalleryGrid thumbs={data.thumbs} kind={data.kind} seriesTitle={data.title} tall={data.tall} />
       </main>
-      <Footer variant={data.footer} />
+      <Footer />
     </>
   );
 }

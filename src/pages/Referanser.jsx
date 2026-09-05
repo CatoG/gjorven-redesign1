@@ -24,7 +24,7 @@ export default function Referanser() {
           ))}
         </div>
       </main>
-      <Footer variant="series" />
+      <Footer />
     </>
   );
 }
