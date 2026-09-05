@@ -7,6 +7,9 @@ const CHIP_ORDER = [
   { slug: 'evig-is', label: 'Evig is' },
   { slug: 'bestefars-bok', label: 'Bestefars bok' },
   { slug: 'floralis', label: 'Floralis' },
+  { slug: 'bokdesign', label: 'Bokdesign' },
+  { slug: 'grafikk-og-illustrasjon', label: 'Grafikk og illustrasjon' },
+  { slug: 'logo-og-identitet', label: 'Logo og identitet' },
 ];
 
 export default function FilterChips({ active }) {

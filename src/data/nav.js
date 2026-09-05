@@ -11,4 +11,7 @@ export const seriesLinks = [
   { label: 'Fjordscapes', to: '/fjordscapes' },
   { label: 'Bestefars bok', to: '/bestefars-bok' },
   { label: 'Floralis', to: '/floralis' },
+  { label: 'Bokdesign', to: '/bokdesign' },
+  { label: 'Grafikk og illustrasjon', to: '/grafikk-og-illustrasjon' },
+  { label: 'Logo og identitet', to: '/logo-og-identitet' },
 ];

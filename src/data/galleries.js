@@ -111,41 +111,35 @@ export const galleries = {
     slug: 'bokdesign',
     title: 'Bokdesign',
     kind: 'photo',
-    showFilters: false,
+    showFilters: true,
     heading: 'Bokdesign',
     intro:
       'Bokomslag og bokdesign for norske forlag — et utvalg fra mer enn tretti års produksjon.',
     counterLabel: (n) => `${n} MOTIV`,
-    footer: 'contact',
+    footer: 'series',
     thumbs: bokdesignRaw.thumbs,
   },
   'grafikk-og-illustrasjon': {
     slug: 'grafikk-og-illustrasjon',
     title: 'Grafikk og illustrasjon',
     kind: 'photo',
-    showFilters: false,
+    showFilters: true,
     heading: 'Grafikk og illustrasjon',
     intro:
       'Design og trykk av reklamemateriell. Digital grafikk, malerier i akvarell og akryl utføres på bestilling.',
     counterLabel: (n) => `${n} MOTIV`,
-    footer: 'contact',
+    footer: 'series',
     thumbs: grafikkRaw.thumbs,
   },
   'logo-og-identitet': {
     slug: 'logo-og-identitet',
     title: 'Logo og identitet',
     kind: 'photo',
-    showFilters: false,
+    showFilters: true,
     heading: 'Logo og identitet',
     intro: 'Typografiske arbeider, logodesign og visuell identitet.',
     counterLabel: (n) => `${n} MOTIV`,
-    footer: 'contact',
+    footer: 'series',
     thumbs: logoRaw.thumbs,
   },
 };
-
-export const seriesOrder = ['evig-is', 'fjordscapes', 'bestefars-bok', 'floralis'];
-
-export function galleryPath(slug) {
-  return `/${slug}`;
-}
