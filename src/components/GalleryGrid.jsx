@@ -5,7 +5,7 @@ function fileSlug(file) {
   return file.replace(/\.[^.]+$/, '');
 }
 
-export default function GalleryGrid({ thumbs, kind, seriesTitle }) {
+export default function GalleryGrid({ thumbs, kind, seriesTitle, tall }) {
   const items = useMemo(
     () => thumbs.map((t, i) => ({ ...t, title: t.title || `${seriesTitle} ${i + 1}` })),
     [thumbs, seriesTitle],
@@ -58,7 +58,9 @@ export default function GalleryGrid({ thumbs, kind, seriesTitle }) {
 
   return (
     <>
-      <div className={`gallery-grid${isIllustration ? ' gallery-grid--illustration' : ''}`}>
+      <div
+        className={`gallery-grid${isIllustration ? ' gallery-grid--illustration' : ''}${tall ? ' gallery-grid--tall' : ''}`}
+      >
         {items.map((item, i) => (
           <a
             key={item.file}

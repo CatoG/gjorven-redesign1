@@ -31,7 +31,7 @@ export default function GalleryPage({ data }) {
 
         {data.showFilters && <FilterChips active={data.slug} />}
 
-        <GalleryGrid thumbs={data.thumbs} kind={data.kind} seriesTitle={data.title} />
+        <GalleryGrid thumbs={data.thumbs} kind={data.kind} seriesTitle={data.title} tall={data.tall} />
       </main>
       <Footer variant={data.footer} />
     </>

@@ -17,6 +17,8 @@ const fjordscapesThumbs = fjordscapesRaw.thumbs.map((t, i) =>
   t.title ? t : { ...t, title: fjordscapesTitleFixes[i - 20] },
 );
 
+const bokdesignThumbs = [{ file: 'storenorske.jpg', title: '' }, ...bokdesignRaw.thumbs];
+
 // Bestefars bok: the 35 illustrations shown in the design mock, matched to
 // their source files by subject (see design_handoff_gjorven_site/README.md).
 const bestefarsBokThumbs = [
@@ -103,7 +105,7 @@ export const galleries = {
     showFilters: true,
     heading: 'Floralis',
     intro:
-      'Med stor interesse for våre ville planter har jeg bygget opp en samling på flere tusen digitale plantefotos, i tillegg til en serie plantegrafikk der bildene er bearbeidet til dekorative formål.',
+      'Med stor interesse for våre ville planter har jeg bygget opp en samling på flere tusen digitale plantefotos. De fleste er fra norsk villflora, men også en del hageplanter og planter fra varmere strøk er med. I tillegg til rene plantefotos har jeg laget en serie plantegrafikk, der bildene er bearbeidet til dekorative formål. Ta gjerne kontakt for nærmere informasjon.',
     counterLabel: (n) => `${n} MOTIV`,
     footer: 'series',
     thumbs: floralisRaw.thumbs,
@@ -112,13 +114,14 @@ export const galleries = {
     slug: 'bokdesign',
     title: 'Bokdesign',
     kind: 'photo',
+    tall: true,
     showFilters: true,
     heading: 'Bokdesign',
     intro:
-      'Bokomslag og bokdesign for norske forlag — et utvalg fra mer enn tretti års produksjon.',
+      'Mitt hovedarbeidsområde har vært design og illustrasjon av bokforsider. Jeg har mange års forlagserfaring fra Cappelen og Aschehoug, men driver nå eget designfirma. De største kundene har vært Cappelen, Gyldendal Tiden og Aschehoug. Jeg har illustrert over 2 000 norske bokforsider, og levert binddesign og boklayout til et stort antall bøker.',
     counterLabel: (n) => `${n} MOTIV`,
     footer: 'series',
-    thumbs: bokdesignRaw.thumbs,
+    thumbs: bokdesignThumbs,
   },
   'grafikk-og-illustrasjon': {
     slug: 'grafikk-og-illustrasjon',
