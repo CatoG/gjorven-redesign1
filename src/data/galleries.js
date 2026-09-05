@@ -69,7 +69,6 @@ export const galleries = {
     intro:
       'Fjordlandskapet er en av våre viktigste naturressurser enten vi ser det fra bilveien, fra dekket på Hurtigruta, eller vi se det i fugleperspektiv fra en snøkledt topp. Sommer som vinter. Med bakgrunn fra Stryn i Nordfjord har jeg bygget opp et betydelig billedarkiv med landskapsmotiver fra fjell og fjord. En del av motivene er videre bearbeidet som akryl- eller akvarellmalerier og digital grafikk. Noen kan også leveres som doble postkort.',
     counterLabel: (n) => `${n} MOTIV`,
-    footer: 'series',
     thumbs: fjordscapesThumbs,
   },
   'evig-is': {
@@ -81,7 +80,6 @@ export const galleries = {
     intro:
       'Isbreene er blant våre mest besøkte turistattraksjoner, og en viktig del av vår norske identitet. Vil de være borte om 50 år på grunn av klimaendringer? Designeren Reidar Gjørven henter inspirasjon i brelandskapet, og tolker is, vann og stein i ord og bilder. Bildene danner også grunnlaget for skulpturelle objekter i glass.',
     counterLabel: (n) => `${n} MOTIV`,
-    footer: 'series',
     cover: 'images/boksbilder/evig_is_cover2.jpg',
     thumbs: evigIsRaw.thumbs,
   },
@@ -94,7 +92,6 @@ export const galleries = {
     intro:
       'I 2008 lanserte Epoke Forlag "Bestefars bok". Design og illustrasjoner ved Reidar Gjørven. Boken inneholder sanger, barnerim, regler og eventyr. Den er illustrert med over 200 tegninger og akvareller. Bestemors bok kom på samme forlag i 2007.',
     counterLabel: (n) => `${n} ILLUSTRASJONER I UTVALG`,
-    footer: 'series',
     cover: 'images/boksbilder/COVER_LR_Bedstefars-bok.jpg',
     thumbs: bestefarsBokThumbs,
   },
@@ -107,7 +104,6 @@ export const galleries = {
     intro:
       'Med stor interesse for våre ville planter har jeg bygget opp en samling på flere tusen digitale plantefotos. De fleste er fra norsk villflora, men også en del hageplanter og planter fra varmere strøk er med. I tillegg til rene plantefotos har jeg laget en serie plantegrafikk, der bildene er bearbeidet til dekorative formål. Ta gjerne kontakt for nærmere informasjon.',
     counterLabel: (n) => `${n} MOTIV`,
-    footer: 'series',
     thumbs: floralisRaw.thumbs,
   },
   bokdesign: {
@@ -120,7 +116,6 @@ export const galleries = {
     intro:
       'Mitt hovedarbeidsområde har vært design og illustrasjon av bokforsider. Jeg har mange års forlagserfaring fra Cappelen og Aschehoug, men driver nå eget designfirma. De største kundene har vært Cappelen, Gyldendal Tiden og Aschehoug. Jeg har illustrert over 2 000 norske bokforsider, og levert binddesign og boklayout til et stort antall bøker.',
     counterLabel: (n) => `${n} MOTIV`,
-    footer: 'series',
     thumbs: bokdesignThumbs,
   },
   'grafikk-og-illustrasjon': {
@@ -132,7 +127,6 @@ export const galleries = {
     intro:
       'Digital grafikk, malerier i akvarell og akryl utføres på bestilling. Medlem Grafill.',
     counterLabel: (n) => `${n} MOTIV`,
-    footer: 'series',
     thumbs: grafikkRaw.thumbs,
   },
   'logo-og-identitet': {
@@ -143,7 +137,6 @@ export const galleries = {
     heading: 'Logo og identitet',
     intro: 'Typografiske arbeider, logodesign og visuell identitet. Design og trykk av reklamemateriell. Kalligrafi av diplomer og lignende. Medlem Grafill.',
     counterLabel: (n) => `${n} MOTIV`,
-    footer: 'series',
     thumbs: logoRaw.thumbs,
   },
 };

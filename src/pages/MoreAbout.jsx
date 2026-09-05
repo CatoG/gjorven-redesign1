@@ -1,7 +1,7 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-export default function MoreAbout({ heading, bodyHtml, footerVariant }) {
+export default function MoreAbout({ heading, bodyHtml }) {
   return (
     <>
       <Header />
@@ -11,7 +11,7 @@ export default function MoreAbout({ heading, bodyHtml, footerVariant }) {
         </div>
         <div className="article-body" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
       </main>
-      <Footer variant={footerVariant} />
+      <Footer />
     </>
   );
 }

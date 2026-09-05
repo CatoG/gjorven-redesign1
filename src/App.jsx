@@ -40,7 +40,7 @@ export default function App() {
           <Route
             key={`${slug}-more`}
             path={`/${slug}/mer-om-${slug}`}
-            element={<MoreAbout heading={more.heading} bodyHtml={more.body} footerVariant={galleries[slug]?.footer ?? 'series'} />}
+            element={<MoreAbout heading={more.heading} bodyHtml={more.body} />}
           />
         ))}
 
